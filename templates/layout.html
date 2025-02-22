@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% block head %}
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        {% block styles %}
+            <!-- Bootstrap CSS -->
+            {{ bootstrap.load_css() }}
+        {% endblock %}
+
+        <title>CS 240 AVL Tree</title>
+        {% endblock %}
+    </head>
+    <body>
+        <!-- Your page content -->
+        <div class="nav-item">
+            <h1>CS 240 AVL Tree</h1>
+        </div>
+        <div class="nav-item">
+            <a href="{{ url_for('home') }}" class="navbar-brand">Home</a>
+            <a href="{{ url_for('about') }}" class="navbar-item">About</a>
+            <a href="{{ url_for('contact') }}" class="navbar-item">Contact</a>
+        </div>
+        
+        {% block content %}{% endblock %}
+
+        {% block scripts %}
+            <!-- Optional JavaScript -->
+            {{ bootstrap.load_js() }}
+        {% endblock %}
+    </body>
+</html>
