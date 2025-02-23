@@ -3,6 +3,56 @@
 About
 {% endblock %}
 {% block content %}
-<h1>About</h1>
-Welcome to the about page!
+<header class="bg-dark py-5">
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-6">
+                <div class="text-center my-5">
+                    <h1 class="display-5 fw-bolder text-white mb-2">About This page</h1>
+                    <p class="lead text-white-50 mb-4">The primary purpose of this page is to allow one to enter a state and view statistics about that states air quality over time.</p>
+                    <p class="lead text-white-50 mb-4">This page was created by John Humphrey for CS240 at Whatcom Community College.</p>
+                    <p class="lead text-white-50 mb-4">Please feel free to checkout my GitHub or LinkedIn or see some of the great free resources that I used to create this site!</p>
+                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                        <a class="btn btn-primary btn-lg px-4 me-sm-3" href="https://github.com/jbhumph">GitHub</a>
+                        <a class="btn btn-primary btn-lg px-4 me-sm-3" href="https://www.linkedin.com/in/john-humphrey-697064300/">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="py-5 border-bottom" id="features">
+    <div class="container px-5 my-5">
+        <div class="row gx-5">
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
+                <h2 class="h4 fw-bolder">Flask</h2>
+                <p>I used Flask as my web application framework for this project.</p>
+                <a class="text-decoration-none" href="https://flask.palletsprojects.com/en/stable/">
+                    Check it out
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
+                <h2 class="h4 fw-bolder">Bootstrap</h2>
+                <p>Bootstrap provided an excellent, dynamic front end library for this project.</p>
+                <a class="text-decoration-none" href="https://getbootstrap.com/">
+                    Check it out
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+            <div class="col-lg-4">
+                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                <h2 class="h4 fw-bolder">Environmental Protection Agency</h2>
+                <p>The EPA's AQI API provides all the data for this project. It's extensive, free, and worth a look!</p>
+                <a class="text-decoration-none" href="https://aqs.epa.gov/aqsweb/documents/data_api.html">
+                    Check it out
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}
