@@ -8,63 +8,63 @@ Graph
         <div class="row gx-5 justify-content-center">
             <div class="col-lg-6">
                 <div class="text-center my-5">
-                    <h1 class="display-5 fw-bolder text-white mb-2">Air Quality Index: Graph</h1>
+                    <h1 class="display-5 fw-bolder text-white mb-2">US Temperature Deviation: Graph</h1>
                 </div>
                 <div class="container mt-5">
                     <form method="POST">
                         <label for="stateSelect" class="form-label">Select a State:</label>
                         <select class="form-select" id="stateSelect" name="state">
                             <option value="" selected disabled>Choose a state</option>
-                            <option value="AL">Alabama</option>
-                            <option value="AK">Alaska</option>
-                            <option value="AZ">Arizona</option>
-                            <option value="AR">Arkansas</option>
-                            <option value="CA">California</option>
-                            <option value="CO">Colorado</option>
-                            <option value="CT">Connecticut</option>
-                            <option value="DE">Delaware</option>
-                            <option value="FL">Florida</option>
-                            <option value="GA">Georgia</option>
-                            <option value="HI">Hawaii</option>
-                            <option value="ID">Idaho</option>
-                            <option value="IL">Illinois</option>
-                            <option value="IN">Indiana</option>
-                            <option value="IA">Iowa</option>
-                            <option value="KS">Kansas</option>
-                            <option value="KY">Kentucky</option>
-                            <option value="LA">Louisiana</option>
-                            <option value="ME">Maine</option>
-                            <option value="MD">Maryland</option>
-                            <option value="MA">Massachusetts</option>
-                            <option value="MI">Michigan</option>
-                            <option value="MN">Minnesota</option>
-                            <option value="MS">Mississippi</option>
-                            <option value="MO">Missouri</option>
-                            <option value="MT">Montana</option>
-                            <option value="NE">Nebraska</option>
-                            <option value="NV">Nevada</option>
-                            <option value="NH">New Hampshire</option>
-                            <option value="NJ">New Jersey</option>
-                            <option value="NM">New Mexico</option>
-                            <option value="NY">New York</option>
-                            <option value="NC">North Carolina</option>
-                            <option value="ND">North Dakota</option>
-                            <option value="OH">Ohio</option>
-                            <option value="OK">Oklahoma</option>
-                            <option value="OR">Oregon</option>
-                            <option value="PA">Pennsylvania</option>
-                            <option value="RI">Rhode Island</option>
-                            <option value="SC">South Carolina</option>
-                            <option value="SD">South Dakota</option>
-                            <option value="TN">Tennessee</option>
-                            <option value="TX">Texas</option>
-                            <option value="UT">Utah</option>
-                            <option value="VT">Vermont</option>
-                            <option value="VA">Virginia</option>
-                            <option value="WA">Washington</option>
-                            <option value="WV">West Virginia</option>
-                            <option value="WI">Wisconsin</option>
-                            <option value="WY">Wyoming</option>
+                            <option value="GHCND:USW00013876">Alabama</option> <!-- Birmingham Intl Airport -->
+                            <option value="GHCND:USW00026451">Alaska</option> <!-- Anchorage -->
+                            <option value="GHCND:USW00023183">Arizona</option> <!-- Phoenix -->
+                            <option value="GHCND:USW00013963">Arkansas</option> <!-- Little Rock -->
+                            <option value="GHCND:USW00023174">California</option> <!-- Los Angeles -->
+                            <option value="GHCND:USW00023234">Colorado</option> <!-- Denver -->
+                            <option value="GHCND:USW00014739">Connecticut</option> <!-- Hartford -->
+                            <option value="GHCND:USW00013781">Delaware</option> <!-- Wilmington -->
+                            <option value="GHCND:USW00012839">Florida</option> <!-- Miami -->
+                            <option value="GHCND:USW00013874">Georgia</option> <!-- Atlanta -->
+                            <option value="GHCND:USW00022521">Hawaii</option> <!-- Honolulu -->
+                            <option value="GHCND:USW00024131">Idaho</option> <!-- Boise -->
+                            <option value="GHCND:USW00094846">Illinois</option> <!-- Chicago -->
+                            <option value="GHCND:USW00093819">Indiana</option> <!-- Indianapolis -->
+                            <option value="GHCND:USW00014933">Iowa</option> <!-- Des Moines -->
+                            <option value="GHCND:USW00003928">Kansas</option> <!-- Wichita -->
+                            <option value="GHCND:USW00093820">Kentucky</option> <!-- Louisville -->
+                            <option value="GHCND:USW00012916">Louisiana</option> <!-- New Orleans -->
+                            <option value="GHCND:USW00014764">Maine</option> <!-- Portland -->
+                            <option value="GHCND:USW00093721">Maryland</option> <!-- Baltimore -->
+                            <option value="GHCND:USW00014739">Massachusetts</option> <!-- Boston -->
+                            <option value="GHCND:USW00094847">Michigan</option> <!-- Detroit -->
+                            <option value="GHCND:USW00014922">Minnesota</option> <!-- Minneapolis -->
+                            <option value="GHCND:USW00013927">Mississippi</option> <!-- Jackson -->
+                            <option value="GHCND:USW00013994">Missouri</option> <!-- St. Louis -->
+                            <option value="GHCND:USW00024153">Montana</option> <!-- Billings -->
+                            <option value="GHCND:USW00014942">Nebraska</option> <!-- Omaha -->
+                            <option value="GHCND:USW00023169">Nevada</option> <!-- Las Vegas -->
+                            <option value="GHCND:USW00014710">New Hampshire</option> <!-- Concord -->
+                            <option value="GHCND:USW00014734">New Jersey</option> <!-- Newark -->
+                            <option value="GHCND:USW00023050">New Mexico</option> <!-- Albuquerque -->
+                            <option value="GHCND:USW00094728">New York</option> <!-- New York City -->
+                            <option value="GHCND:USW00013722">North Carolina</option> <!-- Charlotte -->
+                            <option value="GHCND:USW00024011">North Dakota</option> <!-- Fargo -->
+                            <option value="GHCND:USW00014821">Ohio</option> <!-- Columbus -->
+                            <option value="GHCND:USW00013967">Oklahoma</option> <!-- Oklahoma City -->
+                            <option value="GHCND:USW00024229">Oregon</option> <!-- Portland -->
+                            <option value="GHCND:USW00014737">Pennsylvania</option> <!-- Philadelphia -->
+                            <option value="GHCND:USW00014765">Rhode Island</option> <!-- Providence (nearest major) -->
+                            <option value="GHCND:USW00013883">South Carolina</option> <!-- Columbia -->
+                            <option value="GHCND:USW00014944">South Dakota</option> <!-- Sioux Falls -->
+                            <option value="GHCND:USW00013897">Tennessee</option> <!-- Nashville -->
+                            <option value="GHCND:USW00013958">Texas</option> <!-- Dallas -->
+                            <option value="GHCND:USW00024127">Utah</option> <!-- Salt Lake City -->
+                            <option value="GHCND:USW00014742">Vermont</option> <!-- Burlington -->
+                            <option value="GHCND:USW00013743">Virginia</option> <!-- Richmond -->
+                            <option value="GHCND:USW00024233">Washington</option> <!-- Seattle -->
+                            <option value="GHCND:USW00003860">West Virginia</option> <!-- Charleston -->
+                            <option value="GHCND:USW00014839">Wisconsin</option> <!-- Madison -->
+                            <option value="GHCND:USW00024018">Wyoming</option> <!-- Cheyenne -->
                         </select>
 
                         <button type="submit" class="btn btn-primary mt-3">Submit</button>
@@ -81,7 +81,15 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
 </script>
 
 
-<canvas id="myChart" style="width:100%;max-width:900px"></canvas>
+{% if selected_state %}
+<div class="text-center my-5">
+    <h1 class="display-3 fw-bolder text-dark mb-2">Temperature Deviation: Graph for {{ state_name }}</h1>
+    <h3 class="display-5 fw-bolder text-dark mb-2">Average Temperatures</h3>
+</div>
+
+<div class="d-flex justify-content-center align-items-center">
+    <canvas id="myChart" style="width:100%;max-width:900px"></canvas>
+</div>
 
 <script>
     const xValues = [2014,2015,2016,2017,2018,2019,2020,2021,2022,2023];
@@ -108,7 +116,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
         },{
             label: 'Min Temp',
             data: tempmin,
-            borderColor: Utils.CHART_COLORS.blue,
+            borderColor: "blue",
             fill: false
         },{
             label: 'US Avg Temp',
@@ -118,9 +126,53 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
         }]
     },
     options: {
-        legend: {display: true}
-    }
+        legend: {display: true},
+        scales: {
+            x: {
+                title: {
+                    display: true,
+                    text: 'Year'
+                }
+            },
+            y: {
+                title: {
+                    display: true,
+                    text: 'Temperature  (°C)'
+                }
+            }
+        }
+        }
     });
 </script>
+
+<div class="text-center my-5">
+    <h3 class="display-5 fw-bolder text-dark mb-2">Data Table</h3>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Year</th>
+                <th>Avg Temperature (°C)</th>
+                <th>Max Temperature (°C)</th>
+                <th>Min Temperature (°C)</th>
+                <th>Precipitation (mm)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in arr %}
+            <tr>
+                <td>{{ entry[0] }}</td>
+                <td>{{ entry[1] }}</td>
+                <td>{{ entry[2] }}</td>
+                <td>{{ entry[3] }}</td>
+                <td>{{ entry[4] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endif %}
 
 {% endblock %}
