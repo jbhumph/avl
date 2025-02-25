@@ -1,9 +1,13 @@
 class Node:
-    def __init__(self, data):
+    def __init__(self, data, temp, tmax, tmin, prcpt):
         self.data = data
         self.left = None
         self.right = None
         self.height = 1
+        self.prcpt = prcpt
+        self.temp = temp
+        self.tmax = tmax
+        self.tmin = tmin
 
 
 def getHeight(node):
@@ -16,6 +20,12 @@ def getHeight(node):
 def updateHeight(node):
     # updates height
     node.height = max(getHeight(node.left), getHeight(node.right)) + 1
+
+def getPrcpt(node):
+    return node.prcpt
+
+def getTemp(node):
+    return node.temp
 
 
 def getBalance(node):
@@ -54,16 +64,16 @@ class BinaryTree:
         self.root = None
         self.size = 1
 
-    def insert(self, data):
-        self.root = self._insert(self.root, data)
+    def insert(self, data, temp, tmax, tmin, prcpt):
+        self.root = self._insert(self.root, data, temp, tmax, tmin, prcpt)
 
-    def _insert(self, node, data):
+    def _insert(self, node, data, temp, tmax, tmin, prcpt):
         if not node:
-            return Node(data)
+            return Node(data, temp, tmax, tmin, prcpt)
         if data < node.data:
-            node.left = self._insert(node.left, data)
+            node.left = self._insert(node.left, data, temp, tmax, tmin, prcpt)
         elif data > node.data:
-            node.right = self._insert(node.right, data)
+            node.right = self._insert(node.right, data, temp, tmax, tmin, prcpt)
         else:
             return node
 
@@ -101,7 +111,7 @@ class BinaryTree:
                 else:
                     node = temp
             else:
-                temp = self._getMinValueNode(node.right)
+                temp = self.getMinValueNode(node.right)
                 node.data = temp.data
                 node.right = self._delete(node.right, temp.data)
         if not node:
@@ -123,11 +133,11 @@ class BinaryTree:
 
         return node
 
-    def _getMinValueNode(self, node):
+    def getMinValueNode(self, node):
         # Returns the node with the smallest value found in that tree
         if node is None or node.left is None:
             return node
-        return self._getMinValueNode(node.left)
+        return self.getMinValueNode(node.left)
 
     def preOrder(self, node):
         if not node:
@@ -146,6 +156,12 @@ class BinaryTree:
         if node is None:
             return
         self.print_tree(node.left)
-        print(node.data)
+        print(str(node.data) + " " + str(node.temp) + " " + str(node.prcpt))
         self.print_tree(node.right)
 
+    def setArray(self, node, arr):
+        if node is None:
+            return
+        self.setArray(node.left, arr)
+        arr.append([node.data, node.temp, node.tmax, node.tmin, node.prcpt])
+        self.setArray(node.right, arr)
