@@ -21,12 +21,6 @@ def updateHeight(node):
     # updates height
     node.height = max(getHeight(node.left), getHeight(node.right)) + 1
 
-def getPrcpt(node):
-    return node.prcpt
-
-def getTemp(node):
-    return node.temp
-
 
 def getBalance(node):
     # returns balance of tree
@@ -36,24 +30,22 @@ def getBalance(node):
 
 
 def leftRotate(z):
+    # Perform left rotation
     y = z.right
     t2 = y.left
-    # Perform rotation
     y.left = z
     z.right = t2
-    # Update heights
     updateHeight(z)
     updateHeight(y)
     return y
 
 
 def rightRotate(z):
+    # Perform right rotation
     y = z.left
     t3 = y.right
-    # Perform rotation
     y.right = z
     z.left = t3
-    # Update heights
     updateHeight(z)
     updateHeight(y)
     return y
@@ -67,6 +59,7 @@ class BinaryTree:
     def insert(self, data, temp, tmax, tmin, prcpt):
         self.root = self._insert(self.root, data, temp, tmax, tmin, prcpt)
 
+    # Recursive function to insert a data into the tree
     def _insert(self, node, data, temp, tmax, tmin, prcpt):
         if not node:
             return Node(data, temp, tmax, tmin, prcpt)
@@ -96,6 +89,7 @@ class BinaryTree:
     def delete(self, data):
         self.root = self._delete(self.root, data)
 
+    # Recursive function to delete a data from the tree
     def _delete(self, node, data):
         if not node:
             return node
@@ -140,6 +134,7 @@ class BinaryTree:
         return self.getMinValueNode(node.left)
 
     def preOrder(self, node):
+        # Prints the tree in pre-order
         if not node:
             return
         print(node.data, end=" ")
@@ -147,12 +142,15 @@ class BinaryTree:
         self.preOrder(node.right)
 
     def get_root(self):
+        # Returns the root of the tree
         return self.root
 
     def get_size(self):
+        # Returns the size of the tree
         return self.size
 
     def print_tree(self, node):
+        # Prints the tree
         if node is None:
             return
         self.print_tree(node.left)
@@ -160,6 +158,7 @@ class BinaryTree:
         self.print_tree(node.right)
 
     def setArray(self, node, arr):
+        # Puts all the data in the tree into an array
         if node is None:
             return
         self.setArray(node.left, arr)

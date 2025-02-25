@@ -2,12 +2,10 @@
 <html lang="en">
     <head>
         {% block head %}
-        <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         {% block styles %}
-            <!-- Bootstrap CSS -->
             {{ bootstrap.load_css() }}
         {% endblock %}
 
@@ -15,7 +13,6 @@
         {% endblock %}
     </head>
     <body>
-        <!-- Your page content -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
                 <a class="navbar-brand" href="#!">US State Temperature Graph</a>
@@ -32,7 +29,6 @@
         {% block content %}{% endblock %}
 
         {% block scripts %}
-            <!-- Optional JavaScript -->
             {{ bootstrap.load_js() }}
         {% endblock %}
     </body>
