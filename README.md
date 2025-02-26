@@ -107,8 +107,8 @@ Deployment:
 
 ## Screenshots
 
-![image](documentation/Screenshot 2025-02-25 at 8.56.54 PM.png)
-![image](documentation/Screenshot 2025-02-25 at 8.57.28 PM.png)
-![image](documentation/Screenshot 2025-02-25 at 8.58.35 PM.png)
+![image](documentation/Screenshot%2025-02-25%at%8.56.54%PM.png)
+![image](documentation/Screenshot 2025-02-25%at%8.57.28%PM.png)
+![image](documentation/Screenshot 2025-02-25%at%8.58.35%PM.png)
 
 
