@@ -43,7 +43,7 @@ This should compile and run the program at the stated local address.
 
 
 ## About
-The focal point of this project is the app.py file. This represents the backend of the program. We initialize Flask and Bootstrap. We then define our routes to all sites - most of which are logically quite simple. At this point we can access all of our html documents which are cascaded with Jinja, template.html being the foundation for nthe site's markdown. The site integrated Bootstrap for nearly all of it's styling and much of that can be seen here. 
+The focal point of this project is the app.py file. This represents the backend of the program. We initialize Flask and Bootstrap. We then define our routes to all sites - most of which are logically quite simple. At this point we can access all of our html documents which are cascaded with Jinja, template.html being the foundation for the site's markdown. The site integrated Bootstrap for nearly all of it's styling and much of that can be seen here. 
 
 The bulk of the logic comes with the application itself. We send a GET request to the NOAA server with our parameters in the body and token in the header. 
 
@@ -67,6 +67,30 @@ Within graph.html we create a new canvas which will utilize the Chart.js library
 
 
 ## AVL Tree
+Initially I used a previous Binary Search Tree that I wrote and re-wrote it in Python. For that version I had settled on an iterative function after having some memory issues with recursion. However, after assesing the application at hand, a recursive approach seemed to fit better here. It was an interesting process to determine the best way to add the count and implement the rotation functions. Those ended up as such:
+
+```
+def leftRotate(z):
+    # Perform left rotation
+    y = z.right
+    t2 = y.left
+    y.left = z
+    z.right = t2
+    updateHeight(z)
+    updateHeight(y)
+    return y
+
+
+def rightRotate(z):
+    # Perform right rotation
+    y = z.left
+    t3 = y.right
+    y.right = z
+    z.left = t3
+    updateHeight(z)
+    updateHeight(y)
+    return y
+```
 
 
 
