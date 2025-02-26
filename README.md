@@ -93,9 +93,22 @@ def rightRotate(z):
 ```
 
 
-
 ## Dependencies
 
+- [Flask](https://flask.palletsprojects.com/en/stable/)
+- [Jinja](https://jinja.palletsprojects.com/en/stable/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Chart.js](https://www.chartjs.org/)
+
+Deployment:
+
+- [Heroku](https://www.heroku.com/)
+- [gunicorn](https://gunicorn.org/)
 
 ## Screenshots
+
+![image](documentation/Screenshot 2025-02-25 at 8.56.54 PM.png)
+![image](documentation/Screenshot 2025-02-25 at 8.57.28 PM.png)
+![image](documentation/Screenshot 2025-02-25 at 8.58.35 PM.png)
+
 
