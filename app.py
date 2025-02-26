@@ -9,7 +9,6 @@ app = Flask(__name__)
 
 bootstrap = Bootstrap5(app)
 API_KEY = "CXJAbHFmcAzhlzKmCkVSSdhODynSAJTi"
-EMAIL = "jbhumph@gmail.com"
 
 @app.route("/")
 def home():
